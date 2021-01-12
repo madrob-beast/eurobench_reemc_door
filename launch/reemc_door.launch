@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  
+  <arg name="door"  default="simple"/>  <!-- empty,... -->  
+  <arg name="door_opening_side"  default="CW"/>  <!-- empty,... -->  
+  <arg name="robot_approach_side"  default="CW"/>  <!-- empty,... -->  
+  <arg name="robot"  default="full_ft_hey5"/>  <!-- empty,... -->
+  <arg name="gui" default="true"/>
+  <arg name="debug" default="false"/>
+  <arg name="direction" default="push"/>
+  <arg name="robot_placement_cw" default="true"/>
+  <arg name="self_closing" default="n"/>
+  
+  
+  <arg name="gzpose" default="-x 1.0 -y 0.4 -z 0.86 -R 0.0 -P 0.0 -Y 3.1416" unless="$(arg robot_placement_cw)"/>
+  <arg name="gzpose" value="-x -1.0 -y 0.4 -z 0.86 -R 0.0 -P 0.0 -Y 0" if="$(arg robot_placement_cw)"/>
+  
+
+  <!-- start up world -->
+  <env name="GAZEBO_MODEL_PATH" value="$(find eurobench_reemc_door)/models:$(optenv GAZEBO_MODEL_PATH)"/>
+  <env name="GAZEBO_DOOR_MODEL_DIRECTION" value="$(arg direction)"/>
+  <env name="GAZEBO_DOOR_MODEL_SELFCLOSE" value="$(arg self_closing)"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find eurobench_reemc_door)/worlds/$(arg door).world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="recording" value="false"/>
+    <arg name="debug" value="false"/>
+
+    
+  
+  </include>
+  <!-- spawn robot in simulation --> 
+  <include file="$(find reemc_gazebo)/launch/reemc_spawn.launch">
+    <arg name="robot"  value="$(arg robot)"/>
+    <arg name="gzpose" value="$(arg gzpose)"/>
+  </include>
+
+  <!-- bring up robot --> 
+  <include file="$(find reemc_bringup)/launch/reemc_bringup.launch">
+    <arg name="robot"  value="$(arg robot)"/>
+  </include> 
+
+</launch>

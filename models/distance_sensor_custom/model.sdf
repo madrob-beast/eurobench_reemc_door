@@ -1,0 +1,608 @@
+<?xml version="1.0" ?>
+<gazebo version="1.2">
+  <model name="distance_sensor_custom">
+    <link name="custom_sensors">
+    <gravity>false</gravity>
+      <inertial>
+        <mass>0.1</mass>
+      </inertial>
+     
+      
+            <!--   DISTANCE SENSORS - FIRST SET  -->
+
+   <sensor type="ray" name="base_ir_front_0">   
+      <pose>2.2 2.2 2 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>30</update_rate>
+      <ray>
+         <scan>
+            <horizontal>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0</min_angle>
+               <max_angle>0</max_angle>
+            </horizontal>
+            <vertical>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle> 
+            </vertical>
+         </scan>
+         <range>
+            <min>0.01</min>
+            <max>2.2</max>
+            <resolution>0.02</resolution>
+         </range>
+      </ray>
+      <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
+         <gaussianNoise>0.005</gaussianNoise>
+         <alwaysOn>true</alwaysOn>
+         <updateRate>30</updateRate>
+         <topicName>sensor/base_ir_front_0</topicName>
+         <frameName>base_ir_front_0</frameName>
+         <radiation>INFRARED</radiation>
+         <fov>0.2967</fov>
+      </plugin>
+   </sensor>  
+
+   <sensor type="ray" name="base_ir_front_1">
+      <pose>0.0 -0.1 0.0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>30</update_rate>
+      <ray>
+         <scan>
+            <horizontal>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle>
+            </horizontal>
+            <vertical>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle> 
+            </vertical>
+         </scan>
+         <range>
+            <min>0.01</min>
+            <max>2.2</max>
+            <resolution>0.02</resolution>
+         </range>
+      </ray>
+      <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
+         <gaussianNoise>0.005</gaussianNoise>
+         <alwaysOn>true</alwaysOn>
+         <updateRate>0</updateRate>
+         <topicName>sensor/base_ir_front_1</topicName>
+         <frameName>base_ir_front_1</frameName>
+         <radiation>INFRARED</radiation>
+         <fov>0.2967</fov>
+      </plugin>
+   </sensor>  
+
+
+   <sensor type="ray" name="base_ir_front_2">
+      <pose>0.0 -0.2 0.0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>30</update_rate>
+      <ray>
+         <scan>
+            <horizontal>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle>
+            </horizontal>
+            <vertical>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle> 
+            </vertical>
+         </scan>
+         <range>
+            <min>0.01</min>
+            <max>2.2</max>
+            <resolution>0.02</resolution>
+         </range>
+      </ray>
+      <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
+         <gaussianNoise>0.005</gaussianNoise>
+         <alwaysOn>true</alwaysOn>
+         <updateRate>30</updateRate>
+         <topicName>sensor/base_ir_front_2</topicName>
+         <frameName>base_ir_front_2</frameName>
+         <radiation>INFRARED</radiation>
+         <fov>0.2967</fov>
+      </plugin>
+   </sensor>  
+
+
+   <sensor type="ray" name="base_ir_front_3">
+      <pose>0.0 -0.3 0.0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>50</update_rate>
+      <ray>
+         <scan>
+            <horizontal>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle>
+            </horizontal>
+            <vertical>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle> 
+            </vertical>
+         </scan>
+         <range>
+            <min>0.01</min>
+            <max>2.2</max>
+            <resolution>0.02</resolution>
+         </range>
+      </ray>
+      <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
+         <gaussianNoise>0.005</gaussianNoise>
+         <alwaysOn>true</alwaysOn>
+         <updateRate>30</updateRate>
+         <topicName>sensor/base_ir_front_3</topicName>
+         <frameName>base_ir_front_3</frameName>
+         <radiation>INFRARED</radiation>
+         <fov>0.2967</fov>
+      </plugin>
+   </sensor>     
+      
+            <!--   DISTANCE SENSORS - SECOND SET  -->
+            
+   <sensor type="ray" name="base_ir_front_4">
+   
+      <pose>0.0 0.0 0.3 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>30</update_rate>
+      <ray>
+         <scan>
+            <horizontal>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0</min_angle>
+               <max_angle>0</max_angle>
+            </horizontal>
+            <vertical>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle> 
+            </vertical>
+         </scan>
+         <range>
+            <min>0.01</min>
+            <max>2.2</max>
+            <resolution>0.02</resolution>
+         </range>
+      </ray>
+      <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
+         <gaussianNoise>0.005</gaussianNoise>
+         <alwaysOn>true</alwaysOn>
+         <updateRate>30</updateRate>
+         <topicName>sensor/base_ir_front_4</topicName>
+         <frameName>base_ir_front_4</frameName>
+         <radiation>INFRARED</radiation>
+         <fov>0.2967</fov>
+      </plugin>
+   </sensor>  
+
+   <sensor type="ray" name="base_ir_front_5">
+      <pose>0.0 -0.1 0.3 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>30</update_rate>
+      <ray>
+         <scan>
+            <horizontal>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle>
+            </horizontal>
+            <vertical>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle> 
+            </vertical>
+         </scan>
+         <range>
+            <min>0.01</min>
+            <max>2.2</max>
+            <resolution>0.02</resolution>
+         </range>
+      </ray>
+      <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
+         <gaussianNoise>0.005</gaussianNoise>
+         <alwaysOn>true</alwaysOn>
+         <updateRate>0</updateRate>
+         <topicName>sensor/base_ir_front_5</topicName>
+         <frameName>base_ir_front_5</frameName>
+         <radiation>INFRARED</radiation>
+         <fov>0.2967</fov>
+      </plugin>
+   </sensor>  
+
+
+   <sensor type="ray" name="base_ir_front_6">
+      <pose>0.0 -0.2 0.3 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>30</update_rate>
+      <ray>
+         <scan>
+            <horizontal>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle>
+            </horizontal>
+            <vertical>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle> 
+            </vertical>
+         </scan>
+         <range>
+            <min>0.01</min>
+            <max>2.2</max>
+            <resolution>0.02</resolution>
+         </range>
+      </ray>
+      <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
+         <gaussianNoise>0.005</gaussianNoise>
+         <alwaysOn>true</alwaysOn>
+         <updateRate>30</updateRate>
+         <topicName>sensor/base_ir_front_6</topicName>
+         <frameName>base_ir_front_6</frameName>
+         <radiation>INFRARED</radiation>
+         <fov>0.2967</fov>
+      </plugin>
+   </sensor>  
+
+
+   <sensor type="ray" name="base_ir_front_7">
+      <pose>0.0 -0.3 0.3 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>50</update_rate>
+      <ray>
+         <scan>
+            <horizontal>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle>
+            </horizontal>
+            <vertical>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle> 
+            </vertical>
+         </scan>
+         <range>
+            <min>0.01</min>
+            <max>2.2</max>
+            <resolution>0.02</resolution>
+         </range>
+      </ray>
+      <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
+         <gaussianNoise>0.005</gaussianNoise>
+         <alwaysOn>true</alwaysOn>
+         <updateRate>30</updateRate>
+         <topicName>sensor/base_ir_front_7</topicName>
+         <frameName>base_ir_front_7</frameName>
+         <radiation>INFRARED</radiation>
+         <fov>0.2967</fov>
+      </plugin>
+   </sensor>     
+   
+   <!--   DISTANCE SENSORS - THIRD SET  -->
+   
+      <sensor type="ray" name="base_ir_back_0">
+   
+      <pose>0.0 0.4 0.0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>30</update_rate>
+      <ray>
+         <scan>
+            <horizontal>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle>
+            </horizontal>
+            <vertical>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle> 
+            </vertical>
+         </scan>
+         <range>
+            <min>0.01</min>
+            <max>2.2</max>
+            <resolution>0.02</resolution>
+         </range>
+      </ray>
+      <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
+         <gaussianNoise>0.005</gaussianNoise>
+         <alwaysOn>true</alwaysOn>
+         <updateRate>30</updateRate>
+         <topicName>sensor/base_ir_back_0</topicName>
+         <frameName>base_ir_back_0</frameName>
+         <radiation>INFRARED</radiation>
+         <fov>0.2967</fov>
+      </plugin>
+   </sensor>  
+
+   <sensor type="ray" name="base_ir_back_1">
+      <pose>0.0 0.5 0.0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>30</update_rate>
+      <ray>
+         <scan>
+            <horizontal>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle>
+            </horizontal>
+            <vertical>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle> 
+            </vertical>
+         </scan>
+         <range>
+            <min>0.01</min>
+            <max>2.2</max>
+            <resolution>0.02</resolution>
+         </range>
+      </ray>
+      <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
+         <gaussianNoise>0.005</gaussianNoise>
+         <alwaysOn>true</alwaysOn>
+         <updateRate>0</updateRate>
+         <topicName>sensor/base_ir_back_1</topicName>
+         <frameName>base_ir_back_1</frameName>
+         <radiation>INFRARED</radiation>
+         <fov>0.2967</fov>
+      </plugin>
+   </sensor>  
+
+
+   <sensor type="ray" name="base_ir_back_2">
+      <pose>0.0 0.6 0.0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>30</update_rate>
+      <ray>
+         <scan>
+            <horizontal>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle>
+            </horizontal>
+            <vertical>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle> 
+            </vertical>
+         </scan>
+         <range>
+            <min>0.01</min>
+            <max>2.2</max>
+            <resolution>0.02</resolution>
+         </range>
+      </ray>
+      <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
+         <gaussianNoise>0.005</gaussianNoise>
+         <alwaysOn>true</alwaysOn>
+         <updateRate>30</updateRate>
+         <topicName>sensor/base_ir_back_2</topicName>
+         <frameName>base_ir_back_2</frameName>
+         <radiation>INFRARED</radiation>
+         <fov>0.2967</fov>
+      </plugin>
+   </sensor>  
+
+
+   <sensor type="ray" name="base_ir_back_3">
+      <pose>0.0 0.7 0.0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>50</update_rate>
+      <ray>
+         <scan>
+            <horizontal>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle>
+            </horizontal>
+            <vertical>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle> 
+            </vertical>
+         </scan>
+         <range>
+            <min>0.01</min>
+            <max>2.2</max>
+            <resolution>0.02</resolution>
+         </range>
+      </ray>
+      <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
+         <gaussianNoise>0.005</gaussianNoise>
+         <alwaysOn>true</alwaysOn>
+         <updateRate>30</updateRate>
+         <topicName>sensor/base_ir_back_3</topicName>
+         <frameName>base_ir_back_3</frameName>
+         <radiation>INFRARED</radiation>
+         <fov>0.2967</fov>
+      </plugin>
+   </sensor>     
+   
+         <!--   DISTANCE FOURTH SET  -->
+         
+            <sensor type="ray" name="base_ir_back_4">
+   
+      <pose>0.0 0.4 0.3 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>30</update_rate>
+      <ray>
+         <scan>
+            <horizontal>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0</min_angle>
+               <max_angle>0</max_angle>
+            </horizontal>
+            <vertical>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle> 
+            </vertical>
+         </scan>
+         <range>
+            <min>0.01</min>
+            <max>2.2</max>
+            <resolution>0.02</resolution>
+         </range>
+      </ray>
+      <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
+         <gaussianNoise>0.005</gaussianNoise>
+         <alwaysOn>true</alwaysOn>
+         <updateRate>30</updateRate>
+         <topicName>sensor/base_ir_back_4</topicName>
+         <frameName>base_ir_back_4</frameName>
+         <radiation>INFRARED</radiation>
+         <fov>0.2967</fov>
+      </plugin>
+   </sensor>  
+
+   <sensor type="ray" name="base_ir_back_5">
+      <pose>0.0 0.5 0.3 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>30</update_rate>
+      <ray>
+         <scan>
+            <horizontal>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle>
+            </horizontal>
+            <vertical>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle> 
+            </vertical>
+         </scan>
+         <range>
+            <min>0.01</min>
+            <max>2.2</max>
+            <resolution>0.02</resolution>
+         </range>
+      </ray>
+      <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
+         <gaussianNoise>0.005</gaussianNoise>
+         <alwaysOn>true</alwaysOn>
+         <updateRate>0</updateRate>
+         <topicName>sensor/base_ir_back_5</topicName>
+         <frameName>base_ir_back_5</frameName>
+         <radiation>INFRARED</radiation>
+         <fov>0.2967</fov>
+      </plugin>
+   </sensor>  
+
+
+   <sensor type="ray" name="base_ir_back_6">
+      <pose>0.0 0.6 0.3 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>30</update_rate>
+      <ray>
+         <scan>
+            <horizontal>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle>
+            </horizontal>
+            <vertical>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle> 
+            </vertical>
+         </scan>
+         <range>
+            <min>0.01</min>
+            <max>2.2</max>
+            <resolution>0.02</resolution>
+         </range>
+      </ray>
+      <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
+         <gaussianNoise>0.005</gaussianNoise>
+         <alwaysOn>true</alwaysOn>
+         <updateRate>30</updateRate>
+         <topicName>sensor/base_ir_back_6</topicName>
+         <frameName>base_ir_back_6</frameName>
+         <radiation>INFRARED</radiation>
+         <fov>0.2967</fov>
+      </plugin>
+   </sensor>  
+
+
+   <sensor type="ray" name="base_ir_back_7">
+      <pose>0.0 0.7 0.3 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>50</update_rate>
+      <ray>
+         <scan>
+            <horizontal>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle>
+            </horizontal>
+            <vertical>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>-0.001</min_angle>
+               <max_angle>0.001</max_angle> 
+            </vertical>
+         </scan>
+         <range>
+            <min>0.01</min>
+            <max>2.2</max>
+            <resolution>0.02</resolution>
+         </range>
+      </ray>
+      <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
+         <gaussianNoise>0.005</gaussianNoise>
+         <alwaysOn>true</alwaysOn>
+         <updateRate>30</updateRate>
+         <topicName>sensor/base_ir_back_7</topicName>
+         <frameName>base_ir_back_7</frameName>
+         <radiation>INFRARED</radiation>
+         <fov>0.2967</fov>
+      </plugin>
+   </sensor>     
+      
+    </link>
+  </model>
+</gazebo>
