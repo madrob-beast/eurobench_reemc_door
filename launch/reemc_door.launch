@@ -13,8 +13,8 @@
   <arg name="self_closing" default="n"/>
   
   
-  <arg name="gzpose" default="-x -1.0 -y 0.4 -z 0.86 -R 0.0 -P 0.0 -Y 3.1416" unless="$(arg robot_placement_cw)"/>
-  <arg name="gzpose" value="-x 1.0 -y 0.4 -z 0.86 -R 0.0 -P 0.0 -Y 0" if="$(arg robot_placement_cw)"/>
+  <arg name="gzpose" default="-x -1.0 -y 0.4 -z 0.86 -R 0.0 -P 0.0 -Y 0" unless="$(arg robot_placement_cw)"/>
+  <arg name="gzpose" value="-x 1.0 -y 0.4 -z 0.86 -R 0.0 -P 0.0 -Y 3.1416" if="$(arg robot_placement_cw)"/>
   
 
   <!-- start up world -->
